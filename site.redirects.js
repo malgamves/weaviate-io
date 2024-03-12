@@ -91,7 +91,7 @@ const siteRedirects = {
 
         // Quickstart redirects
         {
-            to: '/developers/weaviate/tutorials/schema',
+            to: '/developers/weaviate/starter-guides/schema',
             from: '/developers/weaviate/quickstart/schema',
         },
         {
@@ -113,7 +113,7 @@ const siteRedirects = {
 
         // Old Quickstart redirects
         {
-            to: '/developers/weaviate/tutorials/schema',
+            to: '/developers/weaviate/starter-guides/schema',
             from: '/developers/weaviate/current/quickstart/schema',
         },
         {
@@ -133,9 +133,15 @@ const siteRedirects = {
             from: '/developers/weaviate/current/quickstart/console',
         },
 
+        // WCS redirects
+        {
+            to: '/developers/wcs/faq',
+            from: '/developers/wcs/troubleshooting',
+        },
+        
         // Tutorial redirects
         {
-            to: '/developers/weaviate/tutorials/schema',
+            to: '/developers/weaviate/starter-guides/schema',
             from: '/developers/weaviate/current/tutorials/how-to-create-a-schema',
         },
         {
@@ -164,6 +170,12 @@ const siteRedirects = {
         {
             to: '/developers/weaviate/manage-data/read-all-objects',
             from: '/developers/weaviate/manage-data/exhaustive-retrieval',
+        },
+
+        // Tutorial refresh Jan 2024
+        {
+            to: '/developers/weaviate/starter-guides/schema',
+            from: '/developers/weaviate/tutorials/schema',
         },
 
         // Blog redirects
@@ -401,17 +413,6 @@ const siteRedirects = {
         {
             to: "/community/events",
             from: "/learn/workshop"
-        },
-
-        {
-            to: "/community/events",
-            from: "/learn/workshops"
-
-        },
-        // Partners to Platform whilst in development
-        {
-            to: "/platform",
-            from: "/partners"
         },
         // Partners Off
         {

@@ -81,6 +81,16 @@ const config = {
                                 src: 'https://plausible.io/js/plausible.js',
                             },
                         },
+                          // Add Scarf
+                          {
+                            tagName: 'img',
+                             attributes: {
+                                src: "https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40",
+                                referrerPolicy: "no-referrer-when-downgrade",
+                                style: "display: none;",
+                                 },
+                        },
+                      
                         // Add hotjar
                         {
                             tagName: 'script',
@@ -97,6 +107,7 @@ const config = {
         }),
     ],
 
+ 
     stylesheets: [
         // Add Font Awesome stylesheets
         '/fonts/font-awesome/fontawesome.css',
@@ -119,10 +130,10 @@ const config = {
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
-    // i18n: {
-    //   defaultLocale: 'en',
-    //   locales: ['en'],
-    // },
+  /*   i18n: {
+   defaultLocale: 'en',
+   locales: ['en','ja'],
+    }, */
 
     presets: [
         [
@@ -193,19 +204,45 @@ const config = {
                         label: 'Product',
                         position: 'right',
                         to: '/platform',
-                        items: [
-                          
-                            {
-                                label: 'Vector Database',
-                                    to: '/platform',
-                                 },
-                           
-                           {
-                                label: 'Security',
-                                href: '/security',
-                           },
-                         ],
+                        
                     },
+                    {  type: 'dropdown',
+                    label: 'Services',
+                    position: 'right',
+                    items: [
+                        {
+                            label: 'Services Overview',
+                            href: '/services',
+                           
+                        },
+                        {
+                            label: 'Serverless',
+                            href: '/services/serverless',
+                           
+                        },
+                        {
+                            label: 'Enterprise Dedicated',
+                            href: '/services/enterprise-dedicated',
+                           
+                        },
+                        {
+                            label: 'Bring Your Own Cloud',
+                            href: '/services/byoc',
+                           
+                        },
+                        {
+                            label: 'Education & Support',
+                            href: '/services/education-and-support',
+                           
+                        },
+                        {
+                            label: 'Pricing',
+                            href: '/pricing',
+                           
+                        },
+                    ]
+                }
+                    ,
                     {
                         type: 'dropdown',
                         label: 'Developers',
@@ -228,6 +265,11 @@ const config = {
                                 docId: 'academy/index',
                                 sidebarid: 'academySidebar',
                                 type: 'doc',
+                            },
+                            {
+                                label: 'Blog',
+                                to: '/blog',
+                               
                             },
                             {
                                 label: 'Newsletter',
@@ -257,6 +299,30 @@ const config = {
                             },
                         ],
                     },
+{
+                    type: 'dropdown',
+                    label: 'Partners',
+                    position: 'right',
+                    items: [
+                        {
+                            label: 'AWS',
+                            href: '/partners/aws',
+                        },
+                        {
+                            label: 'Google Cloud',
+                            href: '/partners/gcp',
+                        },
+                        {
+                            label: 'Snowflake',
+                            href: '/partners/snowflake',
+                        },
+                        {
+                            label: 'Become a Partner',
+                            href: '/partners',
+                        },
+                       
+                    ],
+                },
                     {
                         type: 'dropdown',
                         label: 'Company',
@@ -284,16 +350,7 @@ const config = {
                             },
                         ],
                     },
-                    {
-                        label: 'Blog',
-                        to: '/blog',
-                        position: 'right',
-                    },
-                    {
-                        label: 'Pricing',
-                        to: '/pricing',
-                        position: 'right',
-                    },
+                   
                     {
                         label: 'Try Now',
                         className: 'tryNow',
@@ -375,8 +432,12 @@ const config = {
                             },
                             {
                                 label: 'Partners',
-                                to: '/partners/aws',
+                                to: '/partners',
                             },
+                            {
+                                label: 'Security',
+                                href: '/security',
+                           },
                             {
                                 label: 'Terms & Policies',
                                 to: 'service',
@@ -478,6 +539,9 @@ const config = {
                   respectPrefersColorScheme: false,
                 },
               },
+
+
+              
         }),
 
 
